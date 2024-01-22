@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Регистрация</title>
+</head>
+<body>
+
+<div class="auth-container">
+    <a href="index.html" class="home-button">На главную</a>
+    <h2>Регистрация</h2>
+    <form id="registrationForm" action="registration_process.php" method="post">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" pattern="[А-Яа-яЁё\s\-]+" required>
+        
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" pattern="[А-Яа-яЁё\s\-]+" required>
+        
+        <label for="patronimyc">Отчество:</label>
+        <input type="text" id="patronimyc" name="patronimyc" pattern="[А-Яа-яЁё\s\-]+">
+
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" pattern="[a-zA-Z]+" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="confirmPassword">Повторите пароль:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <p id="passwordDontMatch">Пароли не совпадают</p>
+
+        <label>
+            <input type="checkbox" name="agree" required>
+            Согласие на обработку персональных данных
+        </label>
+        
+        <button type="submit">Зарегистрироваться</button>
+        <p>Есть аккаунт? <a href="login.html">Войдите.</a></p>
+    </form>
+</div>
+<script src="js/reg.js"></script>
+</body>
+</html>

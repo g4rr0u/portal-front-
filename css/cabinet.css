@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.dashboard-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    flex: 1;
+    text-align: center;
+}
+
+.logout-button {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}
+
+.create-request-section, .user-requests-section {
+    margin-bottom: 20px;
+}
+
+.create-request-section h2, .user-requests-section h2 {
+    margin-bottom: 10px;
+}
+
+.request-form {
+    display: none; /* Форма для создания заявки изначально скрыта */
+}
+
+/* .user-requests {
+    
+} */
+
+
