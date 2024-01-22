@@ -43,7 +43,7 @@ body {
 }
 
 .request-form {
-    display: none; /* Форма для создания заявки изначально скрыта */
+    display: none;
 }
 
 /* .user-requests {

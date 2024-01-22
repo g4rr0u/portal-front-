@@ -46,6 +46,7 @@ a:hover {
 .home-button:hover {
     text-decoration: underline;
 }
+
 #passwordDontMatch{
     color: red;
     display: none;

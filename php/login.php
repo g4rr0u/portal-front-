@@ -25,18 +25,18 @@ if($stmt_check) {
     $stmt_check->execute();
     $result = $stmt_check->get_result();
 
-    if($result->num_rows > 0) {
+    if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-        if(password_verify($password, $user['password'])){
-            $user_id = $user['id'];
+        if (password_verify($password, $user['password'])) { 
             $role = $user['role'];
-            $response = array('succes' => true, 'login' => $login, 'role' => $role);
+            $response = array('success' => true, 'login' => $login, 'role' => $role);
         } else {
             $response = array('success' => false);
         }
     } else {
         $response = array('success' => false);
     }
+
     $stmt_check->close();
 } else {
     $response = array('success' => false);

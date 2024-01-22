@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `login=${encodeURIComponent(login)}&password=${encodeURIComponent(password)}`,
+            body: `login=${encodeURIComponent(login)}&` +
+                    `password=${encodeURIComponent(password)}`,
         })
         .then(response => response.json())
         .then(data => {
