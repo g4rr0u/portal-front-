@@ -43,11 +43,11 @@ if($result->num_rows > 0) {
         $stmt_insert->execute();
 
         if($stmt_insert->affected_rows > 0) {
-            $response = array('success' => true, 'login' => $login);
+            $response = array('success' => true, 'login' => $login,);
         } else {
             $response = array('success' => false, 'error' => "Error inserting data");
         }
-        $response['login'] = $login;
+        
         $stmt_insert->close();
     } else {
         $response = array('success' => false, 'error' => "Error preparing statement");

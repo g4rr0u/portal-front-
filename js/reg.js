@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
            .then(data => {
             if (data.success) {
                 console.log('reg is ok!')
-                localStorage.setItem('login', data.login);
+                localStorage.setItem('login', login);
+                localStorage.setItem('user_id', data.user_id);
                 window.location.href = 'cabinet.html';
             } else {
                 if (data.error === 'Login or Email Exist') {

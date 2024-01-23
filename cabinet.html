@@ -8,21 +8,34 @@
 </head>
 <body>
 
-<div class="dashboard-container">
+<div class="dashboard-container" id="dashboard">
     <div class="header">
-        <a href="index.html" class="home-button">На главную</a>
+        <button id="homeButton" class="home-button">На главную</button>
         <div class="user-info">
-            <p>ФИО пользователя</p> 
+            <p id="fullName">ФИО пользователя</p> 
         </div>
-        <a href="#" class="logout-button">Выход</a>
+        <button class="exit-button" id="logoutBtn"  onclick="exit()">Выход</button>
     </div>
 
     <div class="create-request-section">
         <h2>Создать заявку</h2>
         <button id="createRequestBtn">Добавить заявку</button>
-        <div id="requestForm" class="request-form">
-            
-        </div>
+        <form id="requestForm" class="request-form">
+            <h3>Название заявки</h3>
+            <input type="text" name="request-name" id="requestName" maxlength="25" required>
+            <button id="cancelRequestBtn">Отменить</button>
+            <label for="requestCategory">Категория:</label>
+            <select id="requestCategory" name="category" required>
+                <option value="Дороги">DOROGI</option>
+                <option value="ЖКХ">ZKH</option>
+                <option value="Образование">UCHEBA</option>
+            </select>
+            <label for="requestDescription">Детальное описание проблемы:</label>
+            <textarea id="requestDescription" name="requestDescription" rows="4" required ></textarea>
+            <label for="fileInput">Фото (загрузка файла только в формате jpeg, png, bmp и не более 10 МБ):</label>
+            <input type="file" id="fileInput" name="fileInput" accept="image/jpeg, image/png, image/bmp" required>
+            <input type="submit">
+        </form>
     </div>
 
     <div class="user-requests-section">
@@ -32,6 +45,6 @@
         </div>
     </div>
 </div>
-
+<script src="js/cabinet-init.js"></script>
 </body>
 </html>

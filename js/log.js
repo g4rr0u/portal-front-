@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 console.log('auth is ok!');
                 localStorage.setItem('login', data.login);
-
+                localStorage.setItem('user_id', data.user_id);
+                localStorage.setItem('fullName', data.surname + " " + data.name + " " + data.patronimyc)
                 if (data.role === 2) {
                     window.location.href = 'adminPanel.html';
                 } else {
