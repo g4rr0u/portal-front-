@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cabinet.css">
+    <title>Панель Администратора</title>
+</head>
+<body>
+
+<div class="dashboard-container" id="dashboard">
+    <div class="header">
+        <button id="homeButton" class="home-button">На главную</button>
+        <div class="user-info">
+            <p id="fullName">Панель Администратора</p> 
+        </div>
+        <button class="exit-button" id="logoutBtn"  onclick="exit()">Выход</button>
+    </div>
+    <div class="admin-requests-section">
+        <h2>Все заявки</h2>
+        <div id="adminRequestsBlock" class="admin-requests"></div>
+    </div>
+</div>
+<script src="js/admin-panel-init.js"></script>
+</body>
+</html>
